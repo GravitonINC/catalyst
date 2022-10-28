@@ -51,6 +51,7 @@ RUN	apt update && apt install -yqq \
 	ca-certificates \
 	musl \
 	python3 \
+	vim lsof curl wget jq dnsutils iputils-ping serf \
 	"$(if [ "$BUILD_TARGET" != "stripped" ]; then echo "gdb"; fi)" \
 	&& rm -rf /var/lib/apt/lists/*
 
